@@ -1,0 +1,13 @@
+#! /bin/bash
+#SBATCH --gpus=1
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=1
+#SBATCH --gpus-per-node=1
+#SBATCH --ntasks=1
+#SBATCH --time=0-0:30
+#SBATCH --constraint="type_a"
+
+module load Python/Anaconda_v11.2021
+
+python3 bench.py
